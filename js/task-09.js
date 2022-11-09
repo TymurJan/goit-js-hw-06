@@ -11,6 +11,9 @@ const refs = {
 };
 
 refs.change.addEventListener('click', () => {
-  refs.body.style.backgroundColor = getRandomHexColor();
-  refs.color.textContent = getRandomHexColor();  
+  const colorFun = getRandomHexColor();
+  refs.body.style.backgroundColor = colorFun;
+  refs.color.textContent = colorFun;  
 });
+
+console.log(refs.body.style.backgroundColor)

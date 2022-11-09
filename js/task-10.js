@@ -28,6 +28,7 @@ refs.destroy.addEventListener('click', () => {
 
 function createBoxes() {
   refs.boxes.innerHTML = '';
+  let boxesEl = [];
   for (let i = 0; i < refs.input.value; i += 1) {
     const newElement = document.createElement('div');
     newElement.style.width = `${30 + 10 * i}px`;
@@ -35,6 +36,7 @@ function createBoxes() {
     newElement.style.backgroundColor = getRandomHexColor();
     newElement.style.margin = '10px';
 
-    refs.boxes.append(newElement);
-  }
+    boxesEl.push(newElement);
+    
+  } refs.boxes.append(...boxesEl);
 };
